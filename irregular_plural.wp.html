@@ -22,59 +22,66 @@ https://chestbook.si/wp-content/uploads/Games/CSS
 <link href="https://chestbook.si/wp-content/uploads/Games/CSS/iv.css" rel="stylesheet" type="text/css">
 
 <!-- HTML CONTENT -->
+<div class="container my-5 p-2 cool_page">
+    <h1>Irregular Plural</h1>
 
-<h1>Irregular Plural</h1>
+    <p>Practice irregular plural of nouns. Pay attention to the indefinite articles of singular nouns.
+        <br />Select difficulty: easy - common nouns, primary school level; less easy - less common nouns are
+        included. Select <em>'include regular nouns'</em> if you want to mix in some regular plural nouns.
+        <br />Displayed noun: choose which noun is displayed, random of first.
+        <br />Correct solutions will be displayed if you make a mistake.
+    </p>
 
-<p>Practice irregular plural of nouns. Pay attention to the indefinite articles of singular nouns.
-    <br />Select difficulty: easy - common nouns, primary school level; less easy - less common nouns are
-    included. Select <em>'include regular nouns'</em> if you want to mix in some regular plural nouns.
-    <br />Displayed noun: choose which noun is displayed, random of first.
-    <br />Correct solutions will be displayed if you make a mistake.
-</p>
+    <div id="setup" class="container my-3 p-3">
 
-<div id="setup" class="container my-3 p-3">
+        <fieldset>
+            <legend>Setup</legend>Difficulty:
+            <input type="radio" name="level" value="easy" checked="checked" />Easy
+            <input type="radio" name="level" value="hard" />Less Easy
+            <br />
+            <input type="checkbox" id="regular" name="regular"
+                title="They are included in the pool from where nouns are randomly selected" />Include regular nouns
+            <br />Fixed verb:
+            <input type="radio" name="fixed" value="first" />First
+            <input type="radio" name="fixed" value="random" checked="checked" />Random
+            <br />
+            <p>
+                <label for="howmany">How many verbs (5-25):</label>
+                <input type="text" id="howmany" name="howmany" size="2" value="10" style="width:64px" />
+            </p>
+            <p>
+                <input type="button" id="start" value="Start/New set" class="btn cool_dark_orange" />
+            </p>
+        </fieldset>
 
-    <fieldset>
-        <legend>Setup</legend>Difficulty:
-        <input type="radio" name="level" value="easy" checked="checked" />Easy
-        <input type="radio" name="level" value="hard" />Less Easy
-        <br />
-        <input type="checkbox" id="regular" name="regular"
-            title="They are included in the pool from where nouns are randomly selected" />Include regular nouns
-        <br />Fixed verb:
-        <input type="radio" name="fixed" value="first" />First
-        <input type="radio" name="fixed" value="random" checked="checked" />Random
-        <br />How many nouns (5-20):
-        <input type="text" id="howmany" size="2" value="10" />
-        <input type="button" id="start" value="Start/New Set" class="btn cool_dark_orange" />
-    </fieldset>
-
-</div>
-
-<div class="container" id="window">
-    <div id="buttons">
-        <form action="">
-            <input type="button" id="check" value="Check answers" class="btn cool_dark_orange" />
-        </form>
-        <br />
     </div>
-    <div id="board">
-        <table>
-            <colgroup>
-                <col class="col1" />
-                <col class="col2" />
-                <col class="col2" />
-            </colgroup>
-            <thead>
-                <tr>
-                    <td>No.</td>
-                    <td>Singular</td>
-                    <td>Plural</td>
-                </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
+
+    <div class="container" id="window">
+        <div id="buttons">
+            <form action="">
+                <input type="button" id="check" value="Check answers" class="btn cool_dark_orange" />
+            </form>
+            <br />
+        </div>
+        <div id="board">
+            <table>
+                <colgroup>
+                    <col class="col1" />
+                    <col class="col2" />
+                    <col class="col2" />
+                </colgroup>
+                <thead>
+                    <tr>
+                        <td>No.</td>
+                        <td>Singular</td>
+                        <td>Plural</td>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div id="result" class="my-3"></div>
     </div>
-    <div id="result" class="my-3"></div>
+
 </div>
 <!-- END HTML CONTENT -->
